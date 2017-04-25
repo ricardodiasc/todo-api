@@ -18,6 +18,24 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 }
 
 
+app.use((req, resp, next)=>{
+    // Website you wish to allow to connect
+    resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+    // Request methods you wish to allow
+    resp.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    resp.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    resp.setHeader('Access-Control-Allow-Credentials', true);    
+    
+    next();
+});
+
+
 app.get('/todo',(request,response) =>{
     console.log('teste')
     let todo = [{
@@ -67,6 +85,15 @@ app.put('/todo',(request,response)=>{
 });
 
 app.delete('/todos',(request,response) => {
+        // Website you wish to allow to connect
+    response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+    // Request methods you wish to allow
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
     console.log('chegou no delete');
     localStorage.clear();
     response.end();

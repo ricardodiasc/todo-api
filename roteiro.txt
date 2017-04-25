@@ -15,6 +15,11 @@ Roteiro de aula:
 - Configurar actions
 - Configurar mapStoreToProps
 - Configurar mapDispatchToProps
+- Um pouco do async await
+ 
+
+Nao escopo:
+- React Routes 4.0
 - 
 
 
