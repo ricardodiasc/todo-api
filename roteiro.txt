@@ -1,0 +1,20 @@
+Roteiro de aula:
+
+- Implementar TODO
+
+1- Com react simples
+2- Porque do redux
+3- Porque do react-redux
+4- Porque redux-thunk
+5- Porque dos actions
+
+
+
+- Configurar store
+- Configurar reducers
+- Configurar actions
+- Configurar mapStoreToProps
+- Configurar mapDispatchToProps
+- 
+
+
