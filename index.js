@@ -84,7 +84,7 @@ app.put('/todo',(request,response)=>{
     response.end();
 });
 
-app.delete('/todos',(request,response) => {
+app.get('/todos',(request,response) => {
         // Website you wish to allow to connect
     response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
